@@ -14,7 +14,7 @@ namespace API.Controllers
         {
             var useCase = new GetCurrentAuctionUseCase();
             var result = useCase.Execute();
-
+            if(result is null ) return NoContent();
             return Ok(result);
         }
     }
