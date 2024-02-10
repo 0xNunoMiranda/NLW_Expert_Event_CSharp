@@ -14,7 +14,7 @@ namespace API.UseCases.Auctions.GetCurrent
             return repository
                 .Auctions
                 .Include( x => x.Items)
-                .First();
+                .FirstOrDefault();
         }
     }
 }
